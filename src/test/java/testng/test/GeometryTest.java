@@ -37,4 +37,17 @@ public class GeometryTest
         Assert.assertEquals(s.surface(), 4 * Math.PI * 9, 0.001);
         Assert.assertEquals(s.volume(), (4.0 / 3.0) * Math.PI * 27, 0.001);
     }
+
+    @Test
+    public void testSphereSurfaceAndVolume() 
+    {
+    Sphere s = new Sphere(new Point(0, 0), 3);
+    double surface = s.surface();
+    double volume = s.volume();
+    System.out.println("Surface calculée : " + surface);
+    System.out.println("Volume calculé : " + volume);
+
+    Assert.assertEquals(surface, 4 * Math.PI * 9, 0.001);
+    Assert.assertEquals(volume, (4.0 / 3.0) * Math.PI * 27, 0.001);
+}
 }
