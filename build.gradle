@@ -45,9 +45,19 @@ dependencies {
 tasks.named('test') {
     outputs.dir snippetsDir
     useTestNG()
+	testLogging {
+        events "passed", "failed", "skipped", "standard_out", "standard_error"
+        showStandardStreams = true
+    }
+
 }
 
 tasks.named('asciidoctor') {
     inputs.dir snippetsDir
     dependsOn test
 }
+
+tasks.withType(Test) {
+    jvmArgs '-Dfile.encoding=UTF-8'
+}
+

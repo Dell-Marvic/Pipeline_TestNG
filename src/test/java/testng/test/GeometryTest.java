@@ -3,8 +3,16 @@ package testng.test;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+
+
 public class GeometryTest 
 {
+
+    // @BeforeTest
+    // public void debut()
+    // {
+    //     System.out.println("Début du test");
+    // }
 
     @Test
     public void testPoints()
