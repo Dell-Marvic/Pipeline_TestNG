@@ -11,7 +11,7 @@ public class Circle
         this.rayon = rayon;
     }
 
-    public double surafce()
+    public double surface()
     {
         return Math.PI * rayon * rayon;
     }
